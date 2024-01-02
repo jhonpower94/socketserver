@@ -7,7 +7,9 @@ exports.sio = (server) => {
     transport: ["polling"],
     cors: {
       origin: "*",
+      methods: ["GET", "POST"],
     },
+    allowEIO3: true,
   });
 };
 
