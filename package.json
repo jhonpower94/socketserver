@@ -14,6 +14,7 @@
     "crypto-converter-lt": "^1.0.0-alpha.4",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "nodemon": "^3.0.2",
     "socket.io": "^4.7.2"
   }
 }

@@ -6,7 +6,7 @@ exports.sio = (server) => {
   return socketIo(server, {
     transport: ["polling"],
     cors: {
-      origin: "*:*",
+      origin: "*",
     },
   });
 };
