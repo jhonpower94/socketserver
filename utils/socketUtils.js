@@ -20,7 +20,7 @@ exports.connection = (io) => {
     });
 
     socket.on("convert", (data) => {
-      const { from, to, amount } = data;
+      const { from, to, amount, socketid } = data;
 
       cryptoConverter
         .from(from)
@@ -29,7 +29,7 @@ exports.connection = (io) => {
         .convert()
         .then((response) => {
           console.log(response); //or do something else
-          socket.emit("convert", response);
+          socket.emit(`${socketid}`, response);
         });
     });
 
